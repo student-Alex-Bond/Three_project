@@ -63,4 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     makeChanges();
 
+    function createMOvieList(films, parent) {
+        parent.innerHTML = '';
+        movieDB.movies.sort();
+
+        films.forEach((film, i) => {
+            parent.innerHTML += `
+            <li class="promo__interactive-item">${i + 1 + "."} ${film}
+            <div class="delete"></div>
+        </li>
+            `;
+        });
+
 
