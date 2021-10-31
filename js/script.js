@@ -36,3 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addForm.addEventListener('submit', (event) => {
         event.preventDefault();
+        
+        let newFilm = addInput.value;
+        const favorite = checkbox.checked;
+        if (newFilm.length > 21) {
+            newFilm = `${newFilm.substring(0, 22)}...`
+        }
+
+        if (favorite && newFilm !== '') {
+            movieDB.movies.push(newFilm);
+            movieDB.movies.sort();
+            createMOvieList(movieDB.movies, movieList);
+        }
+        event.target.reset();
+    });
+
