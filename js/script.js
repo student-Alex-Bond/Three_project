@@ -25,4 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
         ]
     };
 
+    const addForm = document.querySelector('form.add'),
+        addInput = addForm.querySelector('.adding__input'),
+        checkbox = addForm.querySelector('[type="checkbox"]');
+    const movieList = document.querySelector('.promo__interactive-list');
+    const adv = document.querySelectorAll('.promo__adv img');
 
+    const poster = document.querySelector('.promo__bg');
+    const genre = poster.querySelector('.promo__genre');
+
+    addForm.addEventListener('submit', (event) => {
+        event.preventDefault();
