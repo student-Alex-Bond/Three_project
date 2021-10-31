@@ -50,4 +50,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         event.target.reset();
     });
+    
+        const deleteAdv = (arg) => {
+        arg.forEach(el => el.remove());
+    };
+    deleteAdv(adv);
+
+    const makeChanges = () => {
+        genre.textContent = 'Drama';
+
+        poster.style.backgroundImage = `url('img/bg.jpg')`;
+    };
+    makeChanges();
+
 
